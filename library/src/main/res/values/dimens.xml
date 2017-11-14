@@ -1,0 +1,44 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="item_margin">3dp</dimen>
+
+    <dimen name="search_btn_margin_right">10dp</dimen>
+
+    <dimen name="num_text_size">10sp</dimen>
+
+    <dimen name="text_11">11sp</dimen>
+
+
+    <!--推荐界面的布局参数 Start-->
+
+    <dimen name="banner_height">150dp</dimen>
+    <dimen name="home_iv_adv_marginBottom">5dp</dimen>
+    <dimen name="home_iv_adv_marginTop">5dp</dimen>
+    <dimen name="fm_main_tablayout_width">0dp</dimen>
+    <dimen name="fm_main_tablayout_indicator_height">1.5dp</dimen>
+    <dimen name="fm_main_tablayout_tab_padding">20dp</dimen>
+    <dimen name="fm_main_tablayout_underline_height">2dp</dimen>
+
+    <!--推荐界面的布局参数 End-->
+
+    <!--View_Title_Bar 的布局参数 Start-->
+
+    <dimen name="view_title_bar_height">45dp</dimen>
+
+    <dimen name="ib_back_width">25dp</dimen>
+    <dimen name="ib_back_margin">10dp</dimen>
+    <dimen name="ib_back_height">25dp</dimen>
+
+    <dimen name="btn_right_width">40dp</dimen>
+    <dimen name="btn_right_height">35dp</dimen>
+    <dimen name="btn_right_margin">10dp</dimen>
+    <dimen name="btn_right_padding">3dp</dimen>
+
+    <!--View_Title_Bar 的布局参数 End-->
+
+    <dimen name="linearlayout_modle_title">40dp</dimen>
+    <dimen name="query_col_height">50.0dip</dimen>
+    <dimen name="small_query_col_height">45dip</dimen>
+</resources>

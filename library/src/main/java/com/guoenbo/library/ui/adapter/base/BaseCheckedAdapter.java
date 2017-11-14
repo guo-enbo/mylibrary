@@ -1,0 +1,185 @@
+package com.guoenbo.library.ui.adapter.base;
+
+import android.content.Context;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.AdapterView;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Set;
+
+/**
+ * 
+ * @author leeandy007 一级多选列表
+ * @param <T>
+ */
+public abstract class BaseCheckedAdapter<T> extends BaseInfoAdapter<T> {
+
+	protected HashMap<String, CheckedBean> checkedItem;
+	protected int checkedResId;
+	protected ArrayList<String> checkedList;
+
+	public BaseCheckedAdapter(Context context, List<T> list, int resId,
+			int checkedResId, ArrayList<String> checkedList) {
+		super(context, list, resId);
+		this.checkedResId = checkedResId;
+		this.checkedList = checkedList;
+		initCheckedItem(list);
+	}
+
+	/**
+	 * 返回选中的Item的index
+	 */
+	public HashMap<String, Object> getCheckedItems() {
+		if (!checkedItem.isEmpty()) {
+			HashMap<String, Object> map = new HashMap<String, Object>();
+			Set<String> set = checkedItem.keySet();
+			Iterator<String> it = set.iterator();
+			while (it.hasNext()) {
+				String id = it.next();
+				if (checkedItem.get(id).isChecked()) {
+					map.put(id, checkedItem.get(id).getObject());
+				}
+			}
+			return map;
+		}
+		return null;
+	}
+
+	/**
+	 * 全选
+	 */
+	public void checkedAll() {
+		Set<String> set = checkedItem.keySet();
+		Iterator<String> it = set.iterator();
+		while (it.hasNext()) {
+			String index = it.next();
+			CheckedBean logic = checkedItem.get(index);
+			logic.setChecked(true);
+		}
+		this.notifyDataSetChanged();
+	}
+	
+	/**
+	 * 全部取消
+	 */
+	public void cancleAll() {
+		Set<String> set = checkedItem.keySet();
+		Iterator<String> it = set.iterator();
+		while (it.hasNext()) {
+			String index = it.next();
+			CheckedBean logic = checkedItem.get(index);
+			logic.setChecked(false);
+		}
+		this.notifyDataSetChanged();
+	}
+
+	/**
+	 * 反选
+	 */
+	public void inverseAll() {
+		Set<String> set = checkedItem.keySet();
+		Iterator<String> it = set.iterator();
+		while (it.hasNext()) {
+			String index = it.next();
+			CheckedBean logic = checkedItem.get(index);
+			if (logic.isChecked()) {
+				logic.setChecked(false);
+			} else {
+				logic.setChecked(true);
+			}
+		}
+		this.notifyDataSetChanged();
+	}
+
+	@Override
+	public View getView(int position, View convertView, ViewGroup parent) {
+		BaseCheckedHolder holder = null;
+		if (convertView == null) {
+			convertView = View.inflate(_context, _resId, null);
+			holder = initViewHolder(convertView, checkedResId);
+			convertView.setTag(holder);
+		} else {
+			holder = (BaseCheckedHolder) convertView.getTag();
+		}
+		return dealView(_context, position, convertView, holder);
+	}
+
+
+	public View dealView(Context context, int position, View convertView, BaseCheckedHolder holder) {
+		setItemView(context, holder, position, convertView);
+		return convertView;
+	}
+
+	/**
+	 * 初始化ViewHolder
+	 * */
+	protected abstract BaseCheckedHolder initViewHolder(View view, int checkedResId);
+
+	/**
+	 * 初始化Item的选中状态
+	 */
+	protected abstract void initCheckedItem(List<T> list);
+
+	/**
+	 * 点击事件处理
+	 * @param adapterView
+	 * @param view
+	 * @param position
+	 * @param id
+	 */
+	public abstract void onItemClick(AdapterView<?> adapterView, View view,
+									 int position, long id);
+
+
+
+	/**
+	 * 设置自定义数据部分
+	 * @param holder
+	 * @param position
+	 * @param convertView
+	 */
+	public abstract void setItemView(Context context, BaseCheckedHolder holder, int position,
+			View convertView);
+
+	/**
+	 * 
+	 * @author Administrator 选中逻辑Bean
+	 */
+	public class CheckedBean {
+
+		private boolean checked;
+		private Object object;
+
+		public CheckedBean(boolean checked) {
+			super();
+			this.checked = checked;
+		}
+
+		public CheckedBean(boolean checked, Object object) {
+			super();
+			this.checked = checked;
+			this.object = object;
+		}
+
+		public boolean isChecked() {
+			return checked;
+		}
+
+		public void setChecked(boolean checked) {
+			this.checked = checked;
+		}
+
+		public Object getObject() {
+			return object;
+		}
+
+		public void setObject(Object object) {
+			this.object = object;
+		}
+	}
+
+}

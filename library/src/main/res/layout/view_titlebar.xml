@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/view_title_bar_height"
+    android:background="@color/colorPrimary">
+
+
+
+    <LinearLayout
+        android:id="@+id/linear_title_bar"
+        android:layout_width="50dp"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:orientation="horizontal"
+        tools:ignore="RtlHardcoded">
+
+        <ImageView
+            android:id="@+id/ib_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/ib_back_margin"
+            android:adjustViewBounds="true"
+            tools:ignore="ContentDescription"
+            android:layout_gravity="center"
+            android:background="@mipmap/btn_back"
+            android:visibility="gone"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_title"
+        style="@style/text_white_18"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:layout_centerInParent="true"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true"
+        android:layout_gravity="center_vertical"
+        android:layout_centerVertical="true"
+        tools:ignore="RtlHardcoded">
+
+        <Button
+            android:id="@+id/btn_right"
+            android:layout_width="@dimen/btn_right_width"
+            android:layout_height="@dimen/btn_right_height"
+            android:layout_margin="@dimen/btn_right_margin"
+            android:padding="@dimen/btn_right_padding"
+            android:textColor="@android:color/black"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/tv_right"
+            android:layout_width="@dimen/btn_right_width"
+            android:layout_height="@dimen/btn_right_height"
+            android:layout_margin="@dimen/btn_right_margin"
+            android:padding="@dimen/btn_right_padding"
+            android:textColor="@android:color/black"
+            android:visibility="gone" />
+
+    </LinearLayout>
+
+</RelativeLayout>

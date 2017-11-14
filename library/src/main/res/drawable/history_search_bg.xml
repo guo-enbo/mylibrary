@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- 边框 -->
+    <stroke
+        android:width="0.5dp"
+        android:color="@color/history_search_text_bg" />
+    <!-- 圆角 -->
+    <corners android:radius="4dp" />
+
+    <!-- 这个标签表示纯色填充，通过android:color即可指定shape中填充的颜色 -->
+    <solid android:color="#E7E7E7" />
+
+    <!-- 边距 -->
+    <padding
+        android:bottom="4dp"
+        android:left="8dp"
+        android:right="8dp"
+        android:top="4dp" />
+</shape>

@@ -1,0 +1,48 @@
+<resources>
+    <string name="app_name">指尖金融</string>
+
+    <!-- domain_url正式部署环境 -->
+    <!--<string name="domain_url">http://172.28.65.152/srit-zscq</string>-->
+    <string name="domain_url"></string>
+    <!-- debug_url开发测试环境 -->
+    <string name="debug_url">http://zjjr.qiji99.com/webapi</string>
+    <!-- true：开发测试环境 相应url为debug_url； false：正式部署环境 相应url为domain_url -->
+    <item name="isDebug" type="bool">true</item>
+    <string name="home_news_title">资讯</string>
+    <string name="home_live_title">直播</string>
+    <string name="home_question_title">问答</string>
+    <string name="home_standpoint_title">观点</string>
+    <string name="home_internal_title">内参</string>
+    <string name="home_school_title">学院</string>
+    <string name="home_standpoint_tv_hot">热点解析</string>
+    <string name="home_standpoint_tv_market">行情透视</string>
+    <string name="home_standpoint_tv_money">资金流向</string>
+    <string name="home_standpoint_tv_newstand">最新观点</string>
+    <string name="home_question_tv_newstand">最新问答</string>
+    <string name="home_internal_tv_newstand">最新内参</string>
+    <string name="news_tv_industry">行业动态</string>
+    <string name="news_tv_data">数据速递</string>
+    <string name="news_tv_money">财经要闻</string>
+    <string name="coop_tv_specialist">名家解盘</string>
+    <string name="coop_tv_hot">热点专题</string>
+    <string name="coop_tv_operation">战法精研</string>
+    <string name="home_internal_tv_stock">股票</string>
+    <string name="home_internal_tv_futures">期货</string>
+    <string name="home_internal_tv_currency">外汇</string>
+    <string name="school_tv_stock">金融百科</string>
+    <string name="school_tv_basic">基本面分析</string>
+    <string name="school_tv_technology">技术分析</string>
+    <string name="school_tv_deal">交易之道</string>
+    <string name="et_suggest_hint">请输入您的宝贵意见，我们将不断优化改进</string>
+    <string name="et_phone_or_email">手机号/邮箱</string>
+    <string name="tv_suggest">留下联系方式，方便我们尽快向您反馈</string>
+    <string name="btn_commit">提交</string>
+    <string name="tv_live_living">直播动态</string>
+    <string name="tv_live_recommend">推荐直播</string>
+
+
+    <string name="bottom_navigation_view_behavior">com.qiji.fingertipfinancial.widget.BottomNavigationViewBehavior</string>
+    <string name="float_behavior">com.qiji.fingertipfinancial.widget.behavior.FloatButtonBehavior</string>
+    <string name="bottom_behavior">com.qiji.fingertipfinancial.widget.behavior.BottomBehavior</string>
+    <string name="top_behavior">com.qiji.fingertipfinancial.widget.behavior.TopBehavior</string>
+</resources>

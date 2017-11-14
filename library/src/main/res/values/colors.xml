@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#BF182D</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="lucency">#99ffffff</color>
+    <color name="title_color">#3F51B5</color>
+    <color name="text_color_red">#97181C</color>
+    <color name="text_color_blue">#3274B4</color>
+    <color name="border_right_circle_bg">#BF192D</color>
+
+
+
+    <!-- 浅灰色 -->
+    <color name="gray">#C0C0C0</color>
+    <!-- View分割条的背景色(浅色) -->
+    <color name="DividingStrip_view_color_Undertint">#E1E1E1</color>
+    <color name="adapter_item_sel">#F1F1F1</color>
+    <!-- 深灰色 -->
+    <color name="gray_deep">#808080</color>
+    <color name="history_search_text_color">#9A9A9A</color>
+    <color name="history_search_text_bg">#E7E7E7</color>
+    <color name="chat_bg">#EAEAEA</color>
+    <color name="transparent_background">#50000000</color>
+    <color name="main_menu_white">#EFEFEF</color>
+    <color name="main_menu_color_check">#4169E1</color>
+    <color name="main_menu_color_normal">#6E7174</color>
+
+    <color name="prompt_success">#31c27c</color>
+    <color name="prompt_error">#ff0000</color>
+    <color name="prompt_warning">#f0633d</color>
+
+    <color name="colorDefault">#ffffff</color>
+    <color name="colorBackground">#f1f0f6</color>
+    <color name="colorText">#9b9b9b</color>
+    <color name="thirty_transparent_black">#4d000000</color>
+
+
+    <color name="transparent">#00000000</color>
+    <drawable name="transparent">#00000000</drawable>
+    <color name="user_bg">#BF182D</color>
+    <color name="user_gray_bg">#E9E9E9</color>
+    <color name="btn_login_bg">#dd9302</color>
+    <color name="btn_login_bg_sel">#b47700</color>
+    <color name="grgray">#686868</color>
+    <!-- 灰色文字 -->
+    <color name="gray_text">#929292</color>
+    <color name="gray_account_text">#9E9E9E</color>
+
+    <color name="blue_live_text">#628FC0</color>
+</resources>
